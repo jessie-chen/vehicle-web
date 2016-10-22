@@ -6,13 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run start-dev",
-    "start-dev": "better-npm-run start-dev"
+    "start-dev": "better-npm-run start-dev",
+    "dist": "better-npm-run dist"
   },
   "betterScripts": {
     "start-dev": {
       "command": "webpack-dev-server --inline --hot --config webpack/webpack.config.js",
       "env": {
         "NODE_ENV": "development"
+      }
+    },
+    "dist": {
+      "command": "webpack --config webpack/webpack.config.js",
+      "env": {
+        "NODE_ENV": "production"
       }
     }
   },

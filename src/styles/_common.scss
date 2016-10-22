@@ -1,3 +1,18 @@
 
 @import "~normalize.css";
+@import "variables";
+@import "mixin";
+@import "layout";
 
+html, body {
+    font: $font-size $font-family;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: $container-max-width;
+    @include clearfix();
+}
