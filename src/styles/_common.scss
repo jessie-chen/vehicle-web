@@ -1,6 +1,7 @@
 
 @import "~normalize.css";
 @import "variables";
+@import "utils";
 @import "mixin";
 @import "layout";
 
@@ -14,5 +15,6 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     max-width: $container-max-width;
+    width: $container-width;
     @include clearfix();
 }
