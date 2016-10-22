@@ -4,15 +4,14 @@
 
 import "../../styles/login.scss";
 
-require('../../login.html');
-
-// if (module.hot) {
-//     module.hot.accept();
-// }
-
+// DEVELOP
 if (process.env.NODE_ENV !== 'production') {
-    console.log("------------");
     require('../../login.html');
+
+    // Hot replacement; Comment below for hot reload
+    // if (module.hot) {
+    //     module.hot.accept();
+    // }
 }
 
-console.log("fuck123");
+console.log("fuck");
