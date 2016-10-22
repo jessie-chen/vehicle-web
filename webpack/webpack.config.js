@@ -35,9 +35,9 @@ const pages = ["login", "map", "bus_overview"];
 
 const entry = pages.reduce((total, curr) => {
     let arr = ["babel-polyfill", path.join(PATHS.src, "js/app", curr)];
-    if (TARGET === 'start-dev') {
-        arr.push('webpack-hot-middleware/client');
-    }
+    // if (TARGET === 'start-dev') {
+    //     arr.push('webpack-hot-middleware/client');
+    // }
     total[curr] = arr;
     return total;
 }, {});
@@ -79,8 +79,8 @@ const common = {
         // Webpack 2.0 fixed this mispelling
         // new webpack.optimize.OccurrenceOrderPlugin(),
 
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
+        // new webpack.NoErrorsPlugin(),
 
         new webpack.ProvidePlugin({
             'Promise': 'imports?this=>global!exports?global.Promise!es6-promise',

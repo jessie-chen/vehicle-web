@@ -15,8 +15,18 @@ module.exports = {
             'process.env': {
                 NODE_ENV: JSON.stringify("development")
             },
-            __DEVELOPMENT__: true
+            __SERVER__     : false,
+            __DEVELOPMENT__: false,
+            __DEVTOOLS__   : false
         })
-    ]
+    ],
+
+    devServer: {
+        hot: true,
+        inline: true,
+        contentBase: "src",
+        quiet: true,
+        stats: { colors: true }
+    }
 };
 

@@ -6,13 +6,13 @@ import "../../styles/login.scss";
 
 require('../../login.html');
 
-if (module.hot) {
-    module.hot.accept();
-}
-
-// if (process.env.NODE_ENV !== 'production') {
-//     console.log("------------");
-//     require('../../login.html');
+// if (module.hot) {
+//     module.hot.accept();
 // }
 
-console.log("fuck");
+if (process.env.NODE_ENV !== 'production') {
+    console.log("------------");
+    require('../../login.html');
+}
+
+console.log("fuck123");
