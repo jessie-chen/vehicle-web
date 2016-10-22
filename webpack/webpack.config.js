@@ -42,7 +42,8 @@ const entry = pages.reduce((total, curr) => {
     return total;
 }, {});
 
-// console.log(entry);
+
+const extractCSS = new ExtractTextPlugin("[name].bundle.css");
 
 const common = {
 
@@ -61,19 +62,22 @@ const common = {
 
     module: {
         loaders: [
-            {test: /\.css$/, loader: "style!css"},
-            {test: /\.scss$/, loader: "style!css?localIdentName=[path][name]--[local]!postcss-loader!sass"},
+            // {test: /\.css$/, loader: "style!css"},
+            // {test: /\.scss$/, loader: "style!css?localIdentName=[path][name]--[local]!postcss-loader!sass"},
+            {test: /\.css$/, loader: extractCSS.extract(['css'])},
+            {test: /\.scss$/, loader: extractCSS.extract(['css', 'postcss', 'sass'])},
             {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"},
             {test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/, query: babelConfig},
             {test: /\.png$/, loader: 'file?name=[path][name].[ext]'},
-            {test: /\.jpg/, loader: 'file?name=[path][name].[ext]'},
+            {test: /\.jpg$/, loader: 'file?name=[path][name].[ext]'},
+            {test: /\.ico$/, loader: 'file?name=[path][name].[ext]'},
             {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
             {test: /\.html$/, loader: 'raw-loader'}
         ]
     },
 
     plugins: [
-        new ExtractTextPlugin('bundle.css'),
+        extractCSS,
         // Webpack 1.0
         new webpack.optimize.OccurenceOrderPlugin(),
         // Webpack 2.0 fixed this mispelling
