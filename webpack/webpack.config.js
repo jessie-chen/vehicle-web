@@ -30,16 +30,28 @@ try {
 }
 
 
+// pages
+const pages = ["login", "map", "bus_overview"];
+
+const entry = pages.reduce((total, curr) => {
+    let arr = ["babel-polyfill", path.join(PATHS.src, "js/app", curr)];
+    if (TARGET === 'start-dev') {
+        arr.push('webpack-hot-middleware/client');
+    }
+    total[curr] = arr;
+    return total;
+}, {});
+
+// console.log(entry);
+
 const common = {
 
-    entry: [
-        'babel-polyfill',
-        PATHS.src
-    ],
+    entry: entry,
 
     output: {
         path: PATHS.dist,
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
+        chunkFilename: "[id].chunk.js",
         publicPath: '/'
     },
 
@@ -55,7 +67,8 @@ const common = {
             {test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/, query: babelConfig},
             {test: /\.png$/, loader: 'file?name=[path][name].[ext]'},
             {test: /\.jpg/, loader: 'file?name=[path][name].[ext]'},
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
+            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
+            {test: /\.html$/, loader: 'raw-loader'}
         ]
     },
 

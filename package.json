@@ -23,6 +23,7 @@
   "author": "jc",
   "license": "ISC",
   "dependencies": {
+    "normalize.css": "^5.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
@@ -56,6 +57,7 @@
     "imports-loader": "^0.6.5",
     "node-sass": "^3.10.1",
     "postcss-loader": "^1.0.0",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",

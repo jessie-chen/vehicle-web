@@ -25,8 +25,6 @@ const proxy = httpProxy.createProxyServer({});
     const hotMiddleware = require('webpack-hot-middleware');
     const compiler = webpack(webpackConfig);
 
-    // console.log(webpackConfig);
-
     const serverOptions = {
         contentBase: target,
         quiet: true,
@@ -37,9 +35,13 @@ const proxy = httpProxy.createProxyServer({});
         publicPath: webpackConfig.output.publicPath
     };
 
+    const hotOptions = {
+        reload: true
+    };
+
     app.use(devMiddleware(compiler, serverOptions));
-    app.use(hotMiddleware(compiler, {reload: true }));
-    app.use(express.static(root + "/"));
+    app.use(hotMiddleware(compiler, {}));
+    app.use(express.static(path.resolve(root, "src") + "/"));
 })();
 
 
@@ -53,7 +55,7 @@ config.proxy.forEach(item => {
 
 // spa
 // app.get(/.*/, function (req, res) {
-//     res.sendFile(path.join(root,'index.html'));
+//     res.sendFile(path.join(root,'map.html'));
 // });
 
 const server = http.createServer(app);
