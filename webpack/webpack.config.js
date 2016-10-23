@@ -64,15 +64,22 @@ const common = {
         loaders: [
             // {test: /\.css$/, loader: "style!css"},
             // {test: /\.scss$/, loader: "style!css?localIdentName=[path][name]--[local]!postcss-loader!sass"},
+
             {test: /\.css$/, loader: extractCSS.extract(['css'])},
             {test: /\.scss$/, loader: extractCSS.extract(['css', 'postcss', 'sass'])},
+
+            // fonts
             {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"},
+
             {test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/, query: babelConfig},
             {test: /\.png$/, loader: 'file?name=[path][name].[ext]'},
             {test: /\.jpg$/, loader: 'file?name=[path][name].[ext]'},
             {test: /\.ico$/, loader: 'file?name=[path][name].[ext]'},
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
-            {test: /\.html$/, loader: 'raw-loader'}
+
+            {test: /\.html$/, loader: 'raw-loader'},
+
+            // {test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url?name=/fonts/[name].[ext]"},
+            // {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url?name=/fonts/[name].[ext]"}
         ]
     },
 
