@@ -21,18 +21,23 @@ body {
 }
 
 .left-panel {
-    
+    float: left;
+    width: $left-pannel-width;
+}
+
+.right-panel {
+    margin-left: $left-pannel-width + 5px;
 }
 
 .bus-list {
     background: #041E2C;
     width: 100%;
     min-height: 500px;
-    margin: 0 3px 0 0;
     float: left;
 }
 
 .bus-info {
     border: 1px solid #123F47;
-    height: 100px;
+    height: 120px;
+    border-radius: 8px;
 }
