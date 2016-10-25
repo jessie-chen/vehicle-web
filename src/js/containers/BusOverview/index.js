@@ -52,6 +52,7 @@ class BusOverview extends Component {
                                             <Tab>DCL</Tab>
                                             <Tab>动力系统</Tab>
                                             */}
+
                                         </TabList>
                                         <TabPanel>
                                             <RealtimeData/>

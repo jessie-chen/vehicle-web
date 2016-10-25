@@ -9,7 +9,10 @@ export default class CanDataDashboard extends Component {
 
     render() {
         return (
-            <div>Dashboard</div>
+            <div>
+                <h1>Dashboard</h1>
+            </div>
         )
     }
 }
+
