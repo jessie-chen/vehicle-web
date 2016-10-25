@@ -1,3 +1,6 @@
+/**
+ * Created by IT on 16/10/24.
+ */
 
 export async function get(url, options = {}) {
     const response = await fetch(url, options);
@@ -85,3 +88,9 @@ export async function get(url, options = {}) {
     }
 })("ready", module.exports);
 
+
+export function createTypes(prefix, typesArray) {
+    return typesArray.reduce((result, curr) => {
+        result[curr] = prefix+"/"+curr;
+    }, {});
+}
