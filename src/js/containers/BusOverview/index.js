@@ -5,8 +5,11 @@
 import React, {Component} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Tab, Tabs, TabList, TabPanel } from '../../components/Tab';
 import BusGroupTree from '../BusGroupTree';
 import BusInfoPanel from './BusInfoPanel';
+import RealtimeData from './RealtimeData';
+import CanDataDashboard from './CanDataDashboard';
 
 
 class BusOverview extends Component {
@@ -36,7 +39,18 @@ class BusOverview extends Component {
                                 </div>
 
                                 <div className="tab-container">
-
+                                    <Tabs className="trapezoid">
+                                        <TabList>
+                                            <Tab>实时数据</Tab>
+                                            <Tab>统计图表</Tab>
+                                        </TabList>
+                                        <TabPanel>
+                                            <RealtimeData/>
+                                        </TabPanel>
+                                        <TabPanel>
+                                            <CanDataDashboard/>
+                                        </TabPanel>
+                                    </Tabs>
                                 </div>
                             </div>
                         </div>
