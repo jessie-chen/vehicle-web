@@ -7,6 +7,7 @@ $left-pannel-width: 120px;
 
 body {
     background: #082737;
+    /* background-size: cover; */
 }
 
 .main {
@@ -14,25 +15,40 @@ body {
 }
 
 .main-content {
-    background: rgba(3,19,27,.7);
+    /* background: rgba(3,19,27,.7); */
+    background: url("/img/bus_overview_bg.png") no-repeat 0 0;
+    background-size: cover;
     min-height: 500px;
     border-radius: 5px;
     padding: 15px;
 }
 
 .left-panel {
-    
+    float: left;
+    width: $left-pannel-width;
+}
+
+.right-panel {
+    margin-left: $left-pannel-width + 5px;
 }
 
 .bus-list {
     background: #041E2C;
     width: 100%;
     min-height: 500px;
-    margin: 0 3px 0 0;
     float: left;
 }
 
 .bus-info {
     border: 1px solid #123F47;
-    height: 100px;
+    height: 120px;
+    border-radius: 8px;
+    background: rgba(9,27,40,.5);
+}
+
+.tab-container {
+    background: rgba(3,3,3,.5);
+    width: 100%;
+    min-height: 300px;
+    margin: 20px 0 0;
 }
