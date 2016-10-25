@@ -1,5 +1,5 @@
 
-
+// React tabs css structure
 /*
 .ReactTabs {
     
@@ -8,7 +8,7 @@
         .ReactTabs__Tab {
 
 
-            & .ReactTabs__Tab--selected {
+            &.ReactTabs__Tab--selected {
                 
             }
         }
@@ -20,7 +20,7 @@
 
     .ReactTabs__TabPanel {
 
-        & .ReactTabs__TabPanel--selected {
+        &.ReactTabs__TabPanel--selected {
             
         }
     }
@@ -28,7 +28,6 @@
 */
 
 // trapezoid, rectangle
-
 
 .ReactTabs.trapezoid {
     color: #ddd;
@@ -64,8 +63,50 @@
         border: 1px solid #123F47;
         border-radius: 2px;
 
-        & .ReactTabs__TabPanel--selected {
+        &.ReactTabs__TabPanel--selected {
             
+        }
+    }
+}
+
+
+.ReactTabs.rectangle {
+    color: #ddd;
+
+    .ReactTabs__TabList {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        .ReactTabs__Tab {
+            list-style: none;
+            margin: 0 1px 0 0;
+            padding: 0 15px;
+            float: left;
+            background: #22ACD2;
+            height: 24px;
+            line-height: 24px;
+            min-width: 60px;
+            text-align: center;
+            border: 1px solid #22ACD2;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+
+            &.ReactTabs__Tab--selected {
+                background: #0A2535;
+                border-bottom-color: #0A2535;
+            }
+        }
+    }
+
+    .ReactTabs__TabList {
+
+    }
+
+    .ReactTabs__TabPanel {
+
+        &.ReactTabs__TabPanel--selected {
+
         }
     }
 }

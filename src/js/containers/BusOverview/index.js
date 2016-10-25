@@ -43,6 +43,15 @@ class BusOverview extends Component {
                                         <TabList>
                                             <Tab>实时数据</Tab>
                                             <Tab>统计图表</Tab>
+
+                                            {/*
+                                            <Tab>氢管理系统</Tab>
+                                            <Tab>燃料电池系统</Tab>
+                                            <Tab>电池系统</Tab>
+                                            <Tab>DCF</Tab>
+                                            <Tab>DCL</Tab>
+                                            <Tab>动力系统</Tab>
+                                            */}
                                         </TabList>
                                         <TabPanel>
                                             <RealtimeData/>
