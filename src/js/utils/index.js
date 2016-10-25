@@ -2,6 +2,9 @@
  * Created by IT on 16/10/24.
  */
 
+export http from './http';
+
+
 export async function get(url, options = {}) {
     const response = await fetch(url, options);
     if(response.status == 203) {
@@ -92,5 +95,9 @@ export async function get(url, options = {}) {
 export function createTypes(prefix, typesArray) {
     return typesArray.reduce((result, curr) => {
         result[curr] = prefix+"/"+curr;
+        return result;
     }, {});
 }
+
+
+

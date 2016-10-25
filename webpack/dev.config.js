@@ -27,7 +27,10 @@ module.exports = {
         contentBase: "src",
         quiet: true,
         port: 3000,
-        stats: { colors: true }
+        stats: { colors: true },
+        proxy: {
+            "/a": "http://localhost:8080"
+        }
     }
 };
 

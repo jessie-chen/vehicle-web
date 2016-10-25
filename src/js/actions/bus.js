@@ -1,17 +1,18 @@
 import { createAction } from 'redux-actions';
-import { createTypes } from '../utils';
+import { createTypes, http } from '../utils';
 
-export const PREFIX = 'BUS';
-
-// export const TYPES = {
-//     GET_BUS_INFO: `${PREFIX}/GET_BUS_INFO`
-// };
+export const PREFIX = 'bus';
 
 export const TYPES = createTypes(PREFIX, [
-    "GET_BUS_INFO",
+    "GET_BUS_INFO"
 ]);
 
 
 // Actions
 
-export const get_bus_info = createAction(TYPES.GET_BUS_INFO);
+export const get_bus_info = createAction(
+    TYPES.GET_BUS_INFO,
+    (id) => http.get(`/vehicle/busInfo/${id}`)
+);
+
+
