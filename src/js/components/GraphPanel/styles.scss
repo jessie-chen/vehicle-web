@@ -1,0 +1,48 @@
+
+.graph-panel {
+    position: relative;
+    min-width: 380px;
+    min-height: 145px;
+    background: url("img/bg_bottom_left.png") no-repeat bottom left ,
+        url("img/bg_top_right.png") no-repeat top right;
+    overflow: hidden;
+
+    .title {
+        float: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0 0;
+        font-weight: normal;
+        font-size: 12px;
+
+        width: 95px;
+        height: 36px;
+        line-height: 38px;
+        text-align: center;
+        
+        background: url("img/title_bg.png") no-repeat 0 0;
+
+        /*
+        &:before, &:after {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 29px;
+        }
+        &:before {
+            float: left;
+            background: url("img/title_bg_left.png") no-repeat 0 0;
+        }
+        &:after {
+            float: right;
+            background: url("img/title_bg_right.png") no-repeat 0 0;
+        }
+        */
+    }
+
+    .content {
+        margin: 40px 10px 0;
+    }
+}

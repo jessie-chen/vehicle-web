@@ -27,6 +27,7 @@
   "author": "jc",
   "license": "ISC",
   "dependencies": {
+    "classname": "0.0.0",
     "font-awesome": "^4.6.3",
     "moment": "^2.15.2",
     "normalize.css": "^5.0.0",

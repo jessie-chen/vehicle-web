@@ -40,7 +40,7 @@ export const get_can_statics_data = createAction(
             return {name: h, ...vals};
         });
 
-        console.log(data);
+        // console.log(data);
 
         return Promise.resolve(data);
     }

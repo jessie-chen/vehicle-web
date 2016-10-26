@@ -23,3 +23,11 @@ html, body {
     width: $container-width;
     @include clearfix();
 }
+
+//.row {
+//    display: flex;
+//
+//    .col {
+//        flex: 1 0 50%;
+//    }
+//}
