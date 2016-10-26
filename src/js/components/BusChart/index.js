@@ -23,12 +23,24 @@ class BusChart extends Component {
         ]),
         width: React.PropTypes.number,
         height: React.PropTypes.number,
+        margin: React.PropTypes.shape({
+            top: React.PropTypes.number,
+            left: React.PropTypes.number,
+            bottom: React.PropTypes.number,
+            right: React.PropTypes.number,
+        }),
         data: React.PropTypes.array
     };
 
     static defaultProps = {
         width: 400,
-        height: 200
+        height: 200,
+        margin: {
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0
+        }
     };
 
     constructor(props) {
@@ -113,7 +125,7 @@ class BusChart extends Component {
     }
 
     render() {
-        const {width, height, data} = this.props;
+        const {width, height, data, margin} = this.props;
         const {rootType: ConcreteChart, elements: ChartElements} = this._getChart();
 
         const elems = ChartElements.map(e => {
@@ -123,12 +135,14 @@ class BusChart extends Component {
 
         return (
             <div>
-                <ConcreteChart width={width} height={height} data={data} margin={{top:30, left:20, right:20, bottom:30}}>
+                <ConcreteChart width={width} height={height} data={data} margin={margin}>
                     {elems}
-                    <CartesianGrid stroke="#ccc" strokeDasharray="4"/>
+                    <CartesianGrid stroke="#333" strokeDasharray="2"/>
+                    { /*
                     <XAxis dataKey="name"/>
                     <YAxis/>
                     <Tooltip/>
+                     */}
                     <Legend verticalAlign="top" align="right"/>
                 </ConcreteChart>
             </div>
