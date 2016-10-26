@@ -4,9 +4,8 @@ var Modal = require('react-modal');
 //var Button = require('../Button/index');
 import "../../components/Modal/modal.scss"
 import "../../components/Table/table.scss"
-import "./history.scss"
 
-var HistoryModal = React.createClass({
+var HistoryActivity= React.createClass({
 
     getInitialState: function () {
         return {modalIsOpen: false};
@@ -108,4 +107,4 @@ var HistoryModal = React.createClass({
 
 });
 
-export default HistoryModal;
+export default HistoryActivity;
