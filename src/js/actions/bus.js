@@ -5,7 +5,7 @@ export const PREFIX = 'bus';
 
 export const TYPES = createTypes(PREFIX, [
     "GET_BUS_INFO",
-    "GET_CAN_STATICS_DATA"
+    "GET_CAN_STATICS_DATA",
     "GET_BUS_GROUP",
     "GET_BUS_BY_GROUP_ID"
 ]);

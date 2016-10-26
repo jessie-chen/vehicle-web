@@ -4,11 +4,9 @@ import { TYPES } from '../actions/bus';
 
 const initialState = {
     is_pending: false,
-    bus_info: {
-    },
+    bus_info: {},
     bus_group: [],
-    bus_data:[]
-    },
+    bus_data:[],
     can_statics_data: []
 };
 
