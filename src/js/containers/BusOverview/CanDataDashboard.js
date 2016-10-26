@@ -40,24 +40,24 @@ class CanDataDashboard extends Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="氢气管理系统" className="graph-container" > </GraphPanel>
                     </div>
-                    <div className="col">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="燃料电池系统" className="graph-container" > </GraphPanel>
                     </div>
-                    <div className="col">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="电池系统" className="graph-container" > </GraphPanel>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="DCF" className="graph-container" > </GraphPanel>
                     </div>
-                    <div className="col">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="DCL1" className="graph-container" > </GraphPanel>
                     </div>
-                    <div className="col">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="动力系统" className="graph-container" > </GraphPanel>
                     </div>
                 </div>

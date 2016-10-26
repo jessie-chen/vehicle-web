@@ -1,45 +1,45 @@
 .tree-home{
-  $normal_gray:"../../../img/bus_group_tree/big_gray.png";
+  $normal_gray:"img/big_gray.png";
   .normal_gray{
     background: url($normal_gray) no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
-  $normal_green:"../../../img/bus_group_tree/big_green.png";
+  $normal_green:"img/big_green.png";
   .normal_green{
     background: url($normal_green) no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
-  $normal_orange:"../../../img/bus_group_tree/big_orange.png";
+  $normal_orange:"img/big_orange.png";
   .normal_orange{
     background: url($normal_orange) no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
-  $normal_red:"../../../img/bus_group_tree/big_red.png";
+  $normal_red:"img/big_red.png";
   .normal_red{
     background: url($normal_red) no-repeat 0 0;
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
   }
   .clicked_green{
-    background: url("../../../img/bus_group_tree/clicked_green.png") no-repeat 0 0;
+    background: url("img/clicked_green.png") no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
   .clicked_gray{
-    background: url("../../../img/bus_group_tree/clicked_gray.png") no-repeat 0 0;
+    background: url("img/clicked_gray.png") no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
   .clicked_orange{
-    background: url("../../../img/bus_group_tree/clicked_orange.png") no-repeat 0 0;
+    background: url("img/clicked_orange.png") no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
   .clicked_red{
-    background: url("../../../img/bus_group_tree/clicked_red.png") no-repeat 0 0;
+    background: url("img/clicked_red.png") no-repeat 0 0;
     width: 16px;
     height: 16px;
   }
@@ -72,13 +72,27 @@
     font-size: 12px;
     background-color: $li_bg_color;
   }
-
+  i{
+    display:inline-block;
+    margin-right: 10px;
+    margin-bottom: -3px;
+  }
   .with-bottom{
     background-color: $li_bg_color;
     border-bottom: solid #06395f 1px;
   }
-  .clicked_li{
+  .clicked-li{
     background-color: #01273e;
     opacity:0.54;filter:alpha(opacity=54);
+  }
+  .angel i{
+    margin-left: 11px;
+    margin-top: 8px;
+  }
+  .hide-element{
+      display: none;
+  }
+  .show-element{
+      display: block;
   }
 }

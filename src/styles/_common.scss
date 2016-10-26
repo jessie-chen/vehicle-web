@@ -4,6 +4,7 @@
 //$fa-font-path: "~font-awesome/fonts";
 //@import "~font-awesome/scss/font-awesome.scss";
 @import "~font-awesome/css/font-awesome.css";
+@import "~flexboxgrid";
 
 @import "variables";
 @import "utils";
@@ -28,6 +29,6 @@ html, body {
 //    display: flex;
 //
 //    .col {
-//        flex: 1 0 50%;
+//        flex: 1 0 auto;
 //    }
 //}
