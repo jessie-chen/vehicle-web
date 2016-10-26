@@ -94,7 +94,7 @@ export default [
         "featureType": "poi",
         "elementType": "labels",
         "stylers": {
-            "visibility": "on"
+            "visibility": "off"
         }
     }
 

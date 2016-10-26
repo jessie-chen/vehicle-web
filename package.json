@@ -29,10 +29,12 @@
   "dependencies": {
     "classname": "0.0.0",
     "font-awesome": "^4.6.3",
+    "jsx-to-string": "^0.2.16",
     "moment": "^2.15.2",
     "normalize.css": "^5.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-modal": "^1.5.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "react-tabs": "^0.8.2",

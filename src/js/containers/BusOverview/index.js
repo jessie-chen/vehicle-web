@@ -3,12 +3,14 @@
  */
 
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { Tab, Tabs, TabList, TabPanel } from '../../components/Tab';
 import BusGroupTree from '../BusGroupTree';
 import BusInfoPanel from './BusInfoPanel';
 import RealtimeData from './RealtimeData';
+import History from './History';
 import CanDataDashboard from './CanDataDashboard';
 
 
@@ -66,12 +68,11 @@ class BusOverview extends Component {
                         </div>
                     </div>
                 </div>
-
+                <History/>
                 <Footer/>
             </div>
         )
     }
 }
-
 
 export default BusOverview;

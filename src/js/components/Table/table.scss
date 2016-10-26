@@ -1,0 +1,41 @@
+.table {
+
+  font-size: 12px;
+  width: 100%;
+
+  thead th {
+    padding:5px 10px;
+    color: #fff;
+    font-weight: normal;
+    border:1px solid #00B2FB;
+    background-color: #1083BC;
+    height:20px;
+  }
+
+  tbody {
+    tr.normal {
+      color: #00fff6;
+    }
+    tr.error {
+      color: red;
+    }
+    tr.warn {
+      color: orangered;
+    }
+    tr.dead {
+      color: gray;
+    }
+
+    td {
+      padding:5px 10px;
+      border:1px solid #0a4861;
+      background-color: #022f46;
+      img {
+        margin-bottom: -2px;
+        pargin-right: 10px;
+      }
+    }
+  }
+
+}
+

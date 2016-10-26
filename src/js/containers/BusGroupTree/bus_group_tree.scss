@@ -1,0 +1,84 @@
+.tree-home{
+  $normal_gray:"../../../img/bus_group_tree/big_gray.png";
+  .normal_gray{
+    background: url($normal_gray) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  $normal_green:"../../../img/bus_group_tree/big_green.png";
+  .normal_green{
+    background: url($normal_green) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  $normal_orange:"../../../img/bus_group_tree/big_orange.png";
+  .normal_orange{
+    background: url($normal_orange) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  $normal_red:"../../../img/bus_group_tree/big_red.png";
+  .normal_red{
+    background: url($normal_red) no-repeat 0 0;
+    width: 8px;
+    height: 8px;
+  }
+  .clicked_green{
+    background: url("../../../img/bus_group_tree/clicked_green.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  .clicked_gray{
+    background: url("../../../img/bus_group_tree/clicked_gray.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  .clicked_orange{
+    background: url("../../../img/bus_group_tree/clicked_orange.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  .clicked_red{
+    background: url("../../../img/bus_group_tree/clicked_red.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .red-elem{
+    color: red;
+  }
+  .gray-elem{
+    color: gray;
+  }
+  .orange_elem{
+    color: orangered;
+  }
+  .green-elem{
+    color: green;
+  }
+  .group-style{
+    background-color: #0c82ad;
+    line-height: 38px;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    border-radius: 2.5px;
+    padding: 0;
+    text-align: center;
+  }
+  $li_bg_color:#032a42;
+  li{
+    list-style-type:none;
+    font-size: 12px;
+    background-color: $li_bg_color;
+  }
+
+  .with-bottom{
+    background-color: $li_bg_color;
+    border-bottom: solid #06395f 1px;
+  }
+  .clicked_li{
+    background-color: #01273e;
+    opacity:0.54;filter:alpha(opacity=54);
+  }
+}
