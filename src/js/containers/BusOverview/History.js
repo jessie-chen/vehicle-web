@@ -9,7 +9,7 @@ import "./history.scss"
 var HistoryModal = React.createClass({
 
     getInitialState: function () {
-        return {modalIsOpen: true};
+        return {modalIsOpen: false};
     },
 
     openModal: function () {
