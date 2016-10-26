@@ -6,6 +6,9 @@ const initialState = {
     is_pending: false,
     bus_info: {
     },
+    bus_group: [],
+    bus_data:[]
+    },
     can_statics_data: []
 };
 
@@ -19,6 +22,36 @@ export default typeToReducer({
             ...state,
             is_pending: false,
             bus_info: action.payload
+        }),
+        REJECTED: (state, action) => ({
+            ...state,
+            is_pending: false
+        })
+    },
+    [TYPES.GET_BUS_GROUP]: {
+        PENDING: (state, action) => ({
+            ...state,
+            is_pending: true
+        }),
+        FULFILLED: (state, action) => ({
+            ...state,
+            is_pending: false,
+            bus_group: action.payload
+        }),
+        REJECTED: (state, action) => ({
+            ...state,
+            is_pending: false
+        })
+    },
+    [TYPES.GET_BUS_BY_GROUP_ID]: {
+        PENDING: (state, action) => ({
+            ...state,
+            is_pending: true
+        }),
+        FULFILLED: (state, action) => ({
+            ...state,
+            is_pending: false,
+            bus_data: action.payload
         }),
         REJECTED: (state, action) => ({
             ...state,
