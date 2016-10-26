@@ -6,7 +6,7 @@
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import { PREFIX, get_bus_group ,get_bus_by_group } from '../../actions/bus';
+import { PREFIX, get_bus_group } from '../../actions/bus';
 import "./bus_group_tree.scss"
 @connect(state => state[PREFIX] )
 class BusGroupTree extends Component {
@@ -16,14 +16,18 @@ class BusGroupTree extends Component {
         this.state = {
             clicked:"",
             children_clicked:"",
+            is_parent_clicked:false
         }
     }
     componentDidMount(){
-        const {dispatch} = this.props;
-        dispatch(get_bus_group())
+        const {dispatch,bus_data} = this.props;
+        if (undefined == bus_data || bus_data.length == 0){
+            dispatch(get_bus_group);
+        }
     }
     click_handler(id) {
-        this.setState({clicked:id});
+        let elem_state = this.props.is_parent_clicked != true;
+        this.setState({clicked:id,is_parent_clicked:elem_state});
     }
     children_clicked_handler(children_clicked_id){
         this.setState({children_clicked:children_clicked_id})
@@ -32,8 +36,8 @@ class BusGroupTree extends Component {
         return this.props.bus_group.map((item)=>{
             let is_clicked = this.state.clicked == item.id;
             return <ul className="group-style" key={item.id} onClick={this.click_handler.bind(this,item.id)}>
-                {item.text} {is_clicked ? <i className="fa fa-angle-down" aria-hidden="true"> </i> : <i className="fa fa-angle-down" aria-hidden="true"> </i>}
-                <BusGroupItem parentID={item.id} data_list = {item.bus_data} clicked={this.state.children_clicked} click_handler = {this.children_clicked_handler.bind(this)}/>
+                {item.text} {is_clicked ? <i className="fa fa-angle-up angle" aria-hidden="true"> </i> : <i className="fa fa-angle-down angle" aria-hidden="true"> </i>}
+                <BusGroupItem parentID={item.id} ul_state = {this.state.is_parent_clicked} data_list = {item.bus_data} parent_clicked = {this.state.clicked} clicked={this.state.children_clicked} click_handler = {this.children_clicked_handler.bind(this)}/>
             </ul>;
         });
     }
@@ -53,6 +57,7 @@ class BusGroupItem extends Component{
         super();
         this.state = {
             clicked:""
+
         };
         this.car_state_identification = this.car_state_identification.bind(this);
     }
@@ -66,7 +71,6 @@ class BusGroupItem extends Component{
             let {id,condition,text} = item;
             let is_clicked = clicked == id;
             let classes = "";
-            console.log(">____> " +index);
             if (index+1 < data_list.length){
                 classes = "with-bottom";
             }
@@ -86,9 +90,12 @@ class BusGroupItem extends Component{
         }
     }
     render() {
-        const {parentID} = this.props;
+        const {parent_clicked,parentID,ul_state} = this.props;
+        //console.log(parent_clicked +" "+parentID+" "+ul_state);
         return (
-            <div id={parentID}>{this.render_list()}</div>
+            <div className={parent_clicked == parentID && ul_state ? "hide-element" : "show-element"} id={parentID}>{this.render_list()}</div>
         )
     }
+
+
 }
