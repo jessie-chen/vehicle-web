@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Modal = require('react-modal');
-import {Tab, Tabs, TabList, TabPanel} from '../../components/Tab';
+import {Tab, Tabs, TabList, TabPanel} from '../../../components/Tab';
 import "../../../components/Modal/modal.scss"
 import BatterySys from "./BatterySys"
 import DCF from "./DCF"
@@ -55,21 +55,27 @@ var CanDataDetail = React.createClass({
                         <Tab>DCL</Tab>
                         <Tab>动力系统</Tab>
                     </TabList>
+
                     <TabPanel>
                         <HManageSys/>
                     </TabPanel>
+
                     <TabPanel>
                         <FuelBatterySys/>
                     </TabPanel>
+
                     <TabPanel>
                         <BatterySys/>
                     </TabPanel>
+
                     <TabPanel>
                         <DCF/>
                     </TabPanel>
+
                     <TabPanel>
                         <DCL/>
                     </TabPanel>
+
                     <TabPanel>
                         <PowerSys/>
                     </TabPanel>
