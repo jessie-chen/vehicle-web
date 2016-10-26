@@ -65,6 +65,10 @@
     background: rgba(8,83,120,0.8);
     box-shadow: 0 0 50px rgb(8,83,120);
 
+    img {
+        display:none;
+    }
+
     .items{
         list-style: none;
         padding: 0;

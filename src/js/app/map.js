@@ -67,8 +67,9 @@ function addCar(map) {
         });
         // 创建标注对象并添加到地图
         var marker = new BMap.Marker(point, {icon: positionIcon});
-        marker.addEventListener("click", function (e) {
 
+        // marker 鼠标事件
+        marker.addEventListener("mouseover", function (e) {
             var infoBoxContent =
                     <div class="infoBoxContent">
                         <ul class="items">
@@ -83,6 +84,7 @@ function addCar(map) {
             var infoBox = new BMapLib.InfoBox(map,jsxToString(infoBoxContent).toString(),{
                 boxStyle:{},
                 closeIconMargin: "8px 10px 0 0",
+                closeIconUrl: "../../../img/icons/empty.png",
                 enableAutoPan: true,
                 offset: new BMap.Size(100,40),
                 align: INFOBOX_AT_BOTTOM
@@ -93,6 +95,15 @@ function addCar(map) {
             last_infobox = infoBox;
         });
 
+        // marker 鼠标事件
+        marker.addEventListener("mouseout", function (e) {
+            if(last_infobox != null) last_infobox.close();
+        });
+
+        // marker 鼠标事件
+        marker.addEventListener("click", function (e) {
+            window.location.href = "#";
+        });
 
 
         // BMapLib.CurveLine 地点连线
