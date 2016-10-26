@@ -47,8 +47,11 @@ body {
 }
 
 .tab-container {
+    margin: 20px 0 0;
+}
+
+.ReactTabs__TabPanel {
     background: rgba(3,3,3,.5);
     width: 100%;
     min-height: 300px;
-    margin: 20px 0 0;
 }

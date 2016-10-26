@@ -36,6 +36,8 @@
     "react-modal": "^1.5.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
+    "react-tabs": "^0.8.2",
+    "recharts": "^0.15.2",
     "redux": "^3.6.0",
     "redux-actions": "^0.12.0",
     "redux-logger": "^2.7.0",

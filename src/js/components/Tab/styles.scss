@@ -1,0 +1,112 @@
+
+// React tabs css structure
+/*
+.ReactTabs {
+    
+    .ReactTabs__TabList {
+
+        .ReactTabs__Tab {
+
+
+            &.ReactTabs__Tab--selected {
+                
+            }
+        }
+    }
+
+    .ReactTabs__TabList {
+        
+    }
+
+    .ReactTabs__TabPanel {
+
+        &.ReactTabs__TabPanel--selected {
+            
+        }
+    }
+}
+*/
+
+// trapezoid, rectangle
+
+.ReactTabs.trapezoid {
+    color: #ddd;
+    
+    .ReactTabs__TabList {
+        margin: 0;
+        padding: 0 2px;
+        overflow: hidden;
+        height: 20px;
+
+        .ReactTabs__Tab {
+            list-style: none;
+            margin: 0 0 0 0;
+            padding: 0;
+            float: left;
+            width: 154px;
+            height: 22px;
+            line-height: 22px;
+            background: url("img/tab1_inactive.png") no-repeat 0 0;
+            text-align: center;
+
+            &.ReactTabs__Tab--selected {
+                background: url("img/tab1_active.png") no-repeat 0 0;
+            }
+        }
+    }
+
+    .ReactTabs__TabList {
+        
+    }
+
+    .ReactTabs__TabPanel {
+        border: 1px solid #123F47;
+        border-radius: 2px;
+
+        &.ReactTabs__TabPanel--selected {
+            
+        }
+    }
+}
+
+
+.ReactTabs.rectangle {
+    color: #ddd;
+
+    .ReactTabs__TabList {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        .ReactTabs__Tab {
+            list-style: none;
+            margin: 0 1px 0 0;
+            padding: 0 15px;
+            float: left;
+            background: #22ACD2;
+            height: 24px;
+            line-height: 24px;
+            min-width: 60px;
+            text-align: center;
+            border: 1px solid #22ACD2;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+
+            &.ReactTabs__Tab--selected {
+                background: #0A2535;
+                border-bottom-color: #0A2535;
+            }
+        }
+    }
+
+    .ReactTabs__TabList {
+
+    }
+
+    .ReactTabs__TabPanel {
+
+        &.ReactTabs__TabPanel--selected {
+
+        }
+    }
+}
