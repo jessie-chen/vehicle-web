@@ -1,0 +1,75 @@
+.modal {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  right: 40px;
+  background-color: rgba(8,65,94,0.8);
+  z-index: 99;
+  min-height:600px;
+  padding: 10px;
+  border: 1px solid #04759F;
+  border-radius: 3px;
+
+  .header {
+    text-align:center;
+    height:40px;
+    font:14px;
+    padding-bottom: 10px;
+    color: #ffffff;
+
+    .close {
+        float: right;
+        padding: 10px;
+
+        &:hover{
+            cursor: hand;
+        }
+    }
+
+    span {
+        margin: 5px 10px;     
+    }
+
+    select {
+        color: #ffffff;
+        text-align:center;
+        margin:5px 5px;
+        padding:8px 20px;
+        border: 1px solid #1381BE;
+        border-radius: 3px;
+        background-color: #08415E;
+    }
+  }
+
+  .content{
+    padding: 4px 4px;  
+    background-color: #074157;
+    border: 1px solid #00AEFD;
+    border-radius: 3px;
+  }
+
+  
+    .button {
+        color: #ffffff;
+        padding: 10px 20px;
+        width: 84px;
+        height: 35px; 
+        display: inline;
+        border: 0;
+        background: url(../Button/button_light.png) no-repeat;
+        &:hover{
+            cursor: hand;
+            background: url(../Button/button_dark.png) no-repeat;
+        }
+    }
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+}
