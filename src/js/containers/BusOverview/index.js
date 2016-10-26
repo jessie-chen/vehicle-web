@@ -10,8 +10,9 @@ import { Tab, Tabs, TabList, TabPanel } from '../../components/Tab';
 import BusGroupTree from '../BusGroupTree';
 import BusInfoPanel from './BusInfoPanel';
 import RealtimeData from './RealtimeData';
-import History from './History';
+import HistoryActivity from './HistoryActivity';
 import CanDataDashboard from './CanDataDashboard';
+import CanDataDetail from './CanDataDetail/index';
 
 
 class BusOverview extends Component {
@@ -45,16 +46,6 @@ class BusOverview extends Component {
                                         <TabList>
                                             <Tab>实时数据</Tab>
                                             <Tab>统计图表</Tab>
-
-                                            {/*
-                                            <Tab>氢管理系统</Tab>
-                                            <Tab>燃料电池系统</Tab>
-                                            <Tab>电池系统</Tab>
-                                            <Tab>DCF</Tab>
-                                            <Tab>DCL</Tab>
-                                            <Tab>动力系统</Tab>
-                                            */}
-
                                         </TabList>
                                         <TabPanel>
                                             <RealtimeData/>
@@ -68,7 +59,8 @@ class BusOverview extends Component {
                         </div>
                     </div>
                 </div>
-                <History/>
+                <HistoryActivity/>
+                <CanDataDetail/>
                 <Footer/>
             </div>
         )

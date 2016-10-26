@@ -60,3 +60,20 @@ body {
     width: 400px;
     height: 250px;
 }
+
+.modal {
+    position: absolute;
+    top: 120px;
+    left: 140px;
+    right: 60px;
+
+    i.close{
+        margin-top: -48px;
+        margin-right: -48px;
+        padding: 10px;
+        float: right;
+        border: 2px solid #d3d3d3;
+        border-radius: 50%;
+    }
+}
+
