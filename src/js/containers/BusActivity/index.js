@@ -57,7 +57,7 @@ var BusActivity = React.createClass({
                     onRequestClose={this.closeModal}
                     className="modal"
                     overlayClassName="overlay"
-                    contentLabel="Example Modal"
+                    contentLabel=""
                 >
                     <div className="header">
                         <span>
