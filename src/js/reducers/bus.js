@@ -5,7 +5,8 @@ import { TYPES } from '../actions/bus';
 const initialState = {
     is_pending: false,
     bus_info: {
-    }
+    },
+    can_statics_data: []
 };
 
 export default typeToReducer({
@@ -18,6 +19,21 @@ export default typeToReducer({
             ...state,
             is_pending: false,
             bus_info: action.payload
+        }),
+        REJECTED: (state, action) => ({
+            ...state,
+            is_pending: false
+        })
+    },
+    [TYPES.CAN_STATICS_DATA]: {
+        PENDING: (state, action) => ({
+            ...state,
+            is_pending: true
+        }),
+        FULFILLED: (state, action) => ({
+            ...state,
+            is_pending: false,
+            can_statics_data: action.payload
         }),
         REJECTED: (state, action) => ({
             ...state,
