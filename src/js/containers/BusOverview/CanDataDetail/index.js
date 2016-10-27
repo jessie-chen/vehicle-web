@@ -9,7 +9,7 @@ import HManageSys from "./HManageSys"
 import PowerSys from "./PowerSys"
 
 
-// foo
+// foo1
 
 var CanDataDetail = React.createClass({
 
