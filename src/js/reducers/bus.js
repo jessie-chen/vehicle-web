@@ -56,7 +56,7 @@ export default typeToReducer({
             is_pending: false
         })
     },
-    [TYPES.CAN_STATICS_DATA]: {
+    [TYPES.GET_CAN_STATICS_DATA]: {
         PENDING: (state, action) => ({
             ...state,
             is_pending: true

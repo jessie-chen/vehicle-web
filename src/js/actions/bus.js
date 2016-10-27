@@ -44,7 +44,7 @@ export const get_bus_group = createAction(
 );
 
 export const get_can_statics_data = createAction(
-    TYPES.CAN_STATICS_DATA,
+    TYPES.GET_CAN_STATICS_DATA,
     (id, parts_code) => {
         /*
         const data = [
@@ -61,7 +61,7 @@ export const get_can_statics_data = createAction(
 
         const data = hour.map(h => {
             const vals = parts_code.reduce((total, curr) => {
-                total[curr] = random(100,200);
+                total[curr] = random(50,200);
                 return total;
             }, {});
             return {name: h, ...vals};

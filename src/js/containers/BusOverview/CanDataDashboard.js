@@ -55,20 +55,22 @@ class CanDataDashboard extends Component {
                 <div className="row">
                     <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="氢气管理系统" className="graph-container" >
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
+                            <div>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_h2} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
                             </div>
                         </GraphPanel>
@@ -76,48 +78,52 @@ class CanDataDashboard extends Component {
                     </div>
                     <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="燃料电池系统" className="graph-container" >
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                            <div>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                    </div>
                                 </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_fc} data={can_statics_data} width={width} height={height_fc} margin={margin}/>
+                                    </div>
                                 </div>
                             </div>
                         </GraphPanel>
                     </div>
                     <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="电池系统" className="graph-container" >
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
+                            <div>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_bms} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
                             </div>
                         </GraphPanel>
@@ -126,60 +132,66 @@ class CanDataDashboard extends Component {
                 <div className="row">
                     <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="DCF" className="graph-container" >
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                            <div>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
                             </div>
                         </GraphPanel>
                     </div>
                     <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="DCL1" className="graph-container">
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                            <div>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_dcf} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
                             </div>
                         </GraphPanel>
                     </div>
                     <div className="col-xs-12 col-md-4 col-lg-4">
                         <GraphPanel title="动力系统" className="graph-container">
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
+                            <div>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
-                                </div>
-                                <div className="col-xs-6">
-                                    <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                <div className="row">
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
+                                    <div className="col-xs-6">
+                                        <BusChart bus_id={bus_id} parts_code={parts_code_of_ps} data={can_statics_data} width={width} height={height} margin={margin}/>
+                                    </div>
                                 </div>
                             </div>
                         </GraphPanel>

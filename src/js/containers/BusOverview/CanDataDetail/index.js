@@ -13,11 +13,10 @@ class CanDataDetail  extends Component{
 
     constructor(){
         super();
-        this.state = { modalIsOpen: true};
-    }
-
-    openModal() {
-        this.setState({modalIsOpen: true});
+        this.state = { modalIsOpen: false};
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.href = this.href.bind(this);
     }
 
     afterOpenModal() {
