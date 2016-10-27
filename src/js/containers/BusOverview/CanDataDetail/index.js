@@ -46,7 +46,7 @@ var CanDataDetail = React.createClass({
                 className="modal"
                 overlayClassName="overlay"
                 contentLabel="">
-                <Tabs className="trapezoid" selectedIndex={1}>
+                <Tabs className="rectangle" selectedIndex={1}>
                     <TabList>
                         <Tab>氢管理系统</Tab>
                         <Tab>燃料电池系统</Tab>
