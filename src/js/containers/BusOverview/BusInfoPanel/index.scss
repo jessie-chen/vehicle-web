@@ -1,0 +1,30 @@
+.car_detail_panel{
+  float: left;
+  margin-left: 314px;
+  position: absolute;
+}
+.history_panel{
+  margin-left: 856px;
+}
+.right-content{
+ float: right;
+}
+.bus-pic{
+  position: fixed;
+  margin-top: 26px;
+  margin-left: -180px;
+}
+.bus-img{
+  display: inline-block;
+  background: url("bus.jpg") no-repeat 0 0;
+  width: 111px;
+  height: 129px;
+}
+.history-title{
+  position: fixed;
+  margin-top: -12px;
+}
+.history-content{
+  position: fixed;
+  margin-top: 18px;
+}
