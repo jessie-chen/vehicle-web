@@ -28,7 +28,7 @@ const GraphPanel = (props) => {
 
 GraphPanel.propTypes = {
     title: React.PropTypes.string.isRequired,
-    children: React.PropTypes.element,
+    children: React.PropTypes.oneOfType([React.PropTypes.element, React.PropTypes.arrayOf(React.PropTypes.element)]),
     className: React.PropTypes.string,
     width: React.PropTypes.string,
     height: React.PropTypes.string
