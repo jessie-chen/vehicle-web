@@ -40,12 +40,12 @@ class BusGroupTree extends Component {
     }
     render_list(){
         return this.props.bus_group.map((item,index)=>{
-            let is_clicked = this.state.clicked_id == item.id;
-            return <ul className="group-style" key={item.id} onClick={this.click_handler.bind(this,item.id,index)}> {item.text} {this.state.is_elem_clicked[index] ? <i className="fa fa-angle-down angle" aria-hidden="true"> </i> : <i className="fa fa-angle-up angle" aria-hidden="true"> </i>}
+            return <div id="outside">
+                <div className="group-style" key={item.id} onClick={this.click_handler.bind(this,item.id,index)}> {item.text} {this.state.is_elem_clicked[index] ? <i className="title-mark fa fa-angle-down" aria-hidden="true"> </i> : <i className="title-mark fa fa-angle-up i-title" aria-hidden="true"> </i>}
+                </div>
                 <BusGroupItem parentID={item.id} ul_state = {this.state.is_elem_clicked[index]} data_list = {item.bus_data} clicked={this.state.children_clicked_id} click_handler = {this.children_clicked_handler.bind(this)}/>
-            </ul>;
+            </div>;
         });
-
     }
 
     render() {

@@ -5,8 +5,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { PREFIX, TYPES, get_bus_info } from '../../actions/bus';
-
-
+import InfoBoxFrame from '../../components/InfoBox/index';
 @connect(state => state[PREFIX])
 class BusInfoPanel extends Component {
 
@@ -24,8 +23,9 @@ class BusInfoPanel extends Component {
     render() {
         return (
             <div>
-                bus info panel
-                <button onClick={this.fetchBusInfo}>GET BUS INFO</button>
+              <InfoBoxFrame size = "small">
+
+              </InfoBoxFrame>
             </div>
         )
     }
