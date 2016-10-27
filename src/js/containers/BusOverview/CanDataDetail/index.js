@@ -1,8 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Modal = require('react-modal');
+import React, {Component} from 'react';
+import Modal from '../../../components/Modal';
 import {Tab, Tabs, TabList, TabPanel} from '../../../components/Tab';
-import "../../../components/Modal/modal.scss"
 import BatterySys from "./BatterySys"
 import DCF from "./DCF"
 import DCL from "./DCL"
@@ -43,8 +41,6 @@ var CanDataDetail = React.createClass({
                 isOpen={this.state.modalIsOpen}
                 onAfterOpen={this.afterOpenModal}
                 onRequestClose={this.closeModal}
-                className="modal"
-                overlayClassName="overlay"
                 contentLabel="">
                 <Tabs className="rectangle" selectedIndex={1}>
                     <TabList>
