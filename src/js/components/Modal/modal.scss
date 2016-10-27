@@ -49,19 +49,6 @@
   }
 
   
-    .button {
-        color: #ffffff;
-        padding: 10px 20px;
-        width: 84px;
-        height: 35px; 
-        display: inline;
-        border: 0;
-        background: url(../Button/button_light.png) no-repeat;
-        &:hover{
-            cursor: hand;
-            background: url(../Button/button_dark.png) no-repeat;
-        }
-    }
 
 }
 

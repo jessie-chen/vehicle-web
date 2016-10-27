@@ -14,32 +14,38 @@ class BusGroupTree extends Component {
     constructor() {
         super();
         this.state = {
-            clicked:"",
-            children_clicked:"",
-            is_parent_clicked:false
+            elem_id: 0,
+            children_clicked_id: false,
+            is_elem_clicked: {},
+            clicked_id:0
         }
     }
     componentDidMount(){
         const {dispatch,bus_data} = this.props;
-        if (undefined == bus_data || bus_data.length == 0){
-            dispatch(get_bus_group);
+        if (bus_data.length == 0){
+            dispatch(get_bus_group());
         }
     }
-    click_handler(id) {
-        let elem_state = this.props.is_parent_clicked != true;
-        this.setState({clicked:id,is_parent_clicked:elem_state});
+    click_handler(id,obj_key) {
+        var obj = this.state.is_elem_clicked;
+        if (obj[obj_key] == undefined){
+            obj[obj_key] = false;
+        }
+        obj[obj_key] = !obj[obj_key];
+        console.log("change state to " + obj[obj_key]);
+        this.setState({clicked_id:id,is_elem_clicked:obj});
     }
     children_clicked_handler(children_clicked_id){
-        this.setState({children_clicked:children_clicked_id})
+        this.setState({children_clicked_id:children_clicked_id})
     }
     render_list(){
-        return this.props.bus_group.map((item)=>{
-            let is_clicked = this.state.clicked == item.id;
-            return <ul className="group-style" key={item.id} onClick={this.click_handler.bind(this,item.id)}>
-                {item.text} {is_clicked ? <i className="fa fa-angle-up angle" aria-hidden="true"> </i> : <i className="fa fa-angle-down angle" aria-hidden="true"> </i>}
-                <BusGroupItem parentID={item.id} ul_state = {this.state.is_parent_clicked} data_list = {item.bus_data} parent_clicked = {this.state.clicked} clicked={this.state.children_clicked} click_handler = {this.children_clicked_handler.bind(this)}/>
+        return this.props.bus_group.map((item,index)=>{
+            let is_clicked = this.state.clicked_id == item.id;
+            return <ul className="group-style" key={item.id} onClick={this.click_handler.bind(this,item.id,index)}> {item.text} {this.state.is_elem_clicked[index] ? <i className="fa fa-angle-down angle" aria-hidden="true"> </i> : <i className="fa fa-angle-up angle" aria-hidden="true"> </i>}
+                <BusGroupItem parentID={item.id} ul_state = {this.state.is_elem_clicked[index]} data_list = {item.bus_data} clicked={this.state.children_clicked_id} click_handler = {this.children_clicked_handler.bind(this)}/>
             </ul>;
         });
+
     }
 
     render() {
@@ -66,7 +72,7 @@ class BusGroupItem extends Component{
         click_handler(elem_id);
     }
     render_list(){
-        const {parentID,data_list,clicked} = this.props;
+        const {data_list,clicked} = this.props;
         return data_list.map((item,index)=>{
             let {id,condition,text} = item;
             let is_clicked = clicked == id;
@@ -74,7 +80,7 @@ class BusGroupItem extends Component{
             if (index+1 < data_list.length){
                 classes = "with-bottom";
             }
-            return <li className={is_clicked ? classes + " clicked-li" : classes} key={id+parentID} onClick={this.item_click_handler.bind(this,id)}>{this.car_state_identification(condition,text,is_clicked)}</li>
+            return <li className={is_clicked ? classes + " clicked-li" : classes} key={id} onClick={this.item_click_handler.bind(this,id)}>{this.car_state_identification(condition,text,is_clicked)}</li>
         })
     }
     car_state_identification(condition,text,is_clicked){
@@ -90,12 +96,9 @@ class BusGroupItem extends Component{
         }
     }
     render() {
-        const {parent_clicked,parentID,ul_state} = this.props;
-        //console.log(parent_clicked +" "+parentID+" "+ul_state);
+        const {ul_state} = this.props;
         return (
-            <div className={parent_clicked == parentID && ul_state ? "hide-element" : "show-element"} id={parentID}>{this.render_list()}</div>
+            <div className={ul_state ? "hide-element" : "show-element"}>{this.render_list()}</div>
         )
     }
-
-
 }

@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
+import classname from 'classname';
 import "./button.scss"
 
 class Button extends Component {
 
-    constructor() {
+    static propTypes = {
+        className : React.PropTypes.string,
+        onClick : React.PropTypes.func,
+        label : React.PropTypes.string.isRequired
+    };
 
-    }
-
-    handleClick(){
-        console.log("click");
+    constructor(props) {
+        super(props);
     }
 
     render() {
+        const className = this.props.className;
+        const label = this.props.label;
         return (
-            <button onclick={this.handleClick}></button>
+            <button className={classname("button", className)} onClick={this.props.onClick}>{label}</button>
         )
     }
 }
