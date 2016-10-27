@@ -8,6 +8,9 @@ import FuelBatterySys from "./FuelBatterySys"
 import HManageSys from "./HManageSys"
 import PowerSys from "./PowerSys"
 
+
+// foo
+
 var CanDataDetail = React.createClass({
 
     getInitialState: function () {
