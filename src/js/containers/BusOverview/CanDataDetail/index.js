@@ -8,34 +8,36 @@ import FuelBatterySys from "./FuelBatterySys"
 import HManageSys from "./HManageSys"
 import PowerSys from "./PowerSys"
 
-var CanDataDetail = React.createClass({
 
-    getInitialState: function () {
-        return {modalIsOpen: true};
-    },
+class CanDataDetail  extends Component{
 
-    openModal: function () {
+    constructor(){
+        super();
+        this.state = { modalIsOpen: true};
+    }
+
+    openModal() {
         this.setState({modalIsOpen: true});
-    },
+    }
 
-    afterOpenModal: function () {
+    afterOpenModal() {
         // references are now sync'd and can be accessed.
         //this.refs.subtitle.style.color = '#f00';
-    },
+    }
 
-    closeModal: function () {
+    closeModal() {
         this.setState({modalIsOpen: false});
-    },
+    }
 
-    openModal: function () {
+    openModal () {
         this.setState({modalIsOpen: true});
-    },
+    }
 
-    href: function () {
+    href() {
         window.location.href = "#";
-    },
+    }
 
-    render: function () {
+    render() {
         return (
             <Modal
                 isOpen={this.state.modalIsOpen}
@@ -80,6 +82,6 @@ var CanDataDetail = React.createClass({
         );
     }
 
-});
+}
 
 export default CanDataDetail;

@@ -1,38 +1,35 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Modal = require('react-modal');
-//var Button = require('../Button/index');
+import React,{Component} from 'react';
+import Modal from 'react-modal';
+import Button from '../../components/Button';
 import "./bus_activity.scss"
 import "../../components/Modal/modal.scss"
 
-var BusActivity = React.createClass({
-    
-    getInitialState: function() {
-        return { modalIsOpen: false };
-    },
+class BusActivity extends Component{
 
-    openModal: function() {
-        this.setState({modalIsOpen: true});
-    },
+    constructor(props){
+        super(props);
+        this.state = { modalIsOpen: false };
+        this.href = this.href.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.openModal = this.openModal.bind(this);
+    }
 
-    afterOpenModal: function() {
-        // references are now sync'd and can be accessed.
-        //this.refs.subtitle.style.color = '#f00';
-    },
+    afterOpenModal() {
+    }
 
-    closeModal: function() {
+    closeModal() {
         this.setState({modalIsOpen: false});
-    },
+    }
 
-    openModal: function(){
+    openModal(){
         this.setState({modalIsOpen: true});
-    },
+    }
 
-    href: function (){
+    href(){
         window.location.href = "#";
-    },
+    }
 
-    render: function(){
+    render(){
         return (
             <aside className="sidebar">
                 <div className="close_button"><i className="open fa fa-expand" aria-hidden="true" onClick={this.openModal}/></div>
@@ -96,7 +93,7 @@ var BusActivity = React.createClass({
                                 <option>提示</option>
                             </select>
                         </span>
-                        <button className="button" >查询</button>
+                        <Button className="button" label="查询" />
 
                         <i className="close fa fa-compress" aria-hidden="true" onClick={this.closeModal}/>
                     </div>
@@ -151,7 +148,7 @@ var BusActivity = React.createClass({
         );
     }
 
-});
+}
 
 export default BusActivity;
 

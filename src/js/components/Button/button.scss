@@ -1,15 +1,13 @@
-button {
+.button {
     color: #ffffff;
-    margin:5px 5px;
-    padding:7px 10px;
-    border: 1px solid #00fff6;
-    background: 
-        url(./left.png) no-repeat,
-        url(./middle.png) repeat,
-        url(./left.png) no-repeat;
-
-
-    :hover{
-        background: #00FF00 url("./button_dark.png") no-repeat fixed top;
+    padding: 10px 20px;
+    width: 84px;
+    height: 35px;
+    display: inline;
+    border: 0;
+    background: url(./button_light.png) no-repeat;
+    &:hover{
+        cursor: hand;
+        background: url(./button_dark.png) no-repeat;
     }
 }
