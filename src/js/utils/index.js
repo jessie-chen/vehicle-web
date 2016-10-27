@@ -111,3 +111,11 @@ export function isArray(obj) {
 export function isString(obj) {
     return Object.prototype.toString.apply(obj) === "[object String]";
 }
+
+export function range(start, end) {
+    return Array(end - start + 1).fill(0).map((v, i) => i + start);
+}
+
+export function random(start, end) {
+    return start + Math.round(Math.random() * (end - start));
+}

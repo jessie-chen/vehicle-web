@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions';
-import { createTypes, http } from '../utils';
+import { createTypes, http, range, random } from '../utils';
 
 export const PREFIX = 'bus';
 
@@ -57,11 +57,11 @@ export const get_can_statics_data = createAction(
             {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
         ];
         */
-        const randValue = () => Math.round(Math.random() * 1000);
-        const hour = [1,2,3,4,5,6,7,8,9,10,11,12];
+        const hour = range(1,20);
+
         const data = hour.map(h => {
             const vals = parts_code.reduce((total, curr) => {
-                total[curr] = randValue();
+                total[curr] = random(100,200);
                 return total;
             }, {});
             return {name: h, ...vals};
