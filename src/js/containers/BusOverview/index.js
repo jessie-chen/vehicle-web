@@ -42,7 +42,7 @@ class BusOverview extends Component {
                                 </div>
 
                                 <div className="tab-container">
-                                    <Tabs className="trapezoid" selectedIndex={1}>
+                                    <Tabs className="trapezoid" selectedIndex={0}>
                                         <TabList>
                                             <Tab>实时数据</Tab>
                                             <Tab>统计图表</Tab>

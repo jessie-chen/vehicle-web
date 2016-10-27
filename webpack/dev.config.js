@@ -26,6 +26,7 @@ module.exports = {
         inline: true,
         contentBase: "src",
         quiet: true,
+        host: "0.0.0.0",
         port: 3000,
         stats: { colors: true },
         proxy: {
