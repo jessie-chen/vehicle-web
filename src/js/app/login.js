@@ -7,9 +7,11 @@ if (process.env.NODE_ENV !== 'production') {
         module.hot.accept();
     }
 }
+
 import "../../styles/login.scss";
 import React from "react";
 import {login} from "../actions/login";
+
 export default class Login extends React.Component {
     constructor(props) {
         super(props);

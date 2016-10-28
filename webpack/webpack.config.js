@@ -31,7 +31,7 @@ try {
 
 
 // pages
-const pages = ["login", "map", "bus_overview"];
+const pages = ["login", "map", "bus_overview", "test"];
 
 const entry = pages.reduce((total, curr) => {
     let arr = ["babel-polyfill", path.join(PATHS.src, "js/app", curr)];
