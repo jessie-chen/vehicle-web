@@ -40,17 +40,17 @@ class BusGroupTree extends Component {
     }
     render_list(){
         return this.props.bus_group.map((item,index)=>{
-            return <div id="outside">
-                <div className="group-style" key={item.id} onClick={this.click_handler.bind(this,item.id,index)}> {item.text} {this.state.is_elem_clicked[index] ? <i className="title-mark fa fa-angle-down" aria-hidden="true"> </i> : <i className="title-mark fa fa-angle-up i-title" aria-hidden="true"> </i>}
+            return <div key={index+2} id={index}>
+                <div key={index+item.id} className="group-style" onClick={this.click_handler.bind(this,item.id,index)}> <span className="bus-group-name">{item.text}</span> {this.state.is_elem_clicked[index] ? <i id="title-mark" className="fa fa-angle-down" aria-hidden="true"> </i> : <i id="title-mark" className="title-mark fa fa-angle-up i-title" aria-hidden="true"> </i>}
                 </div>
-                <BusGroupItem parentID={item.id} ul_state = {this.state.is_elem_clicked[index]} data_list = {item.bus_data} clicked={this.state.children_clicked_id} click_handler = {this.children_clicked_handler.bind(this)}/>
+                <BusGroupItem key = {index+item.id+1} parentID={item.id} ul_state = {this.state.is_elem_clicked[index]} data_list = {item.bus_data} clicked={this.state.children_clicked_id} click_handler = {this.children_clicked_handler.bind(this)}/>
             </div>;
         });
     }
 
     render() {
         return (
-            <div id="bus_group" className="tree-home">
+            <div className="tree-home">
                 {this.render_list()}
             </div>
         );
@@ -98,7 +98,7 @@ class BusGroupItem extends Component{
     render() {
         const {ul_state} = this.props;
         return (
-            <div className={ul_state ? "hide-element" : "show-element"}>{this.render_list()}</div>
+            <div id={this.props.parentID} className={ul_state ? "hide-element" : "show-element"}>{this.render_list()}</div>
         )
     }
 }

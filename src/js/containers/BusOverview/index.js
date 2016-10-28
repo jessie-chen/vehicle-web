@@ -8,7 +8,7 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { Tab, Tabs, TabList, TabPanel } from '../../components/Tab';
 import BusGroupTree from '../BusGroupTree';
-import BusInfoPanel from './BusInfoPanel';
+import BusInfoPanel from './BusInfoPanel/index';
 import RealtimeData from './RealtimeData';
 import HistoryActivity from './HistoryActivity';
 import CanDataDashboard from './CanDataDashboard';

@@ -1,34 +1,70 @@
 .info_box{
   .small_top{
-    background:url("./img/infobox_up.png") no-repeat 0 0;
+    background:url("img/infobox_up.png") no-repeat 0 0;
     height:2px;
     width: 316px;
   }
   .small_bottom{
-    background: url("./img/infobox_down.png") no-repeat 0 0;
+    background: url("img/infobox_down.png") no-repeat 0 0;
     height: 13px;
     width: 347px;
   }
   .small_left{
-    background: url("./img/infobox_left.png") no-repeat 0 0;
+    background: url("img/infobox_left.png") no-repeat 0 0;
     width: 20px;
     height: 147px;
   }
   .small_right{
-    background: url("./img/infobox_right.png") no-repeat 0 0;
+    background: url("img/infobox_right.png") no-repeat 0 0;
     width: 20px;
     height: 141px;
   }
-  .big-title{
-
+  .pentagon{
+    background: url("img/pentagon.png") no-repeat 0 0;
+    width: 162px;
+    height: 22px;
   }
-  .small-title{
 
+  .box-title{
+    position: fixed;
+    margin-top: 14px;
+    margin-left: 200px;
   }
   i{
     display: inline-block;
   }
   .box-top{
-
+    position: fixed;
+    margin-top: 14px;
+    margin-left: 38px;
+  }
+  .box-left{
+    position: fixed;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+  .box-right{
+    margin-top: 14px;
+    position: fixed;
+    margin-left: 352px;
+  }
+  .box-bottom{
+    margin-top: 146px;
+    margin-left: 22px;
+    position: fixed;
+  }
+  .title-text{
+    margin-left: 32%;
+    color: #fff;
+    font-size: 14px;
+  }
+  .dashboard{
+    position: fixed;
+    font-size: 14px;
+    margin-top: 38px;
+    margin-left: 44px;
+    color: #fff;
+    line-height: 26px;
+    width: 300px;
   }
 }
