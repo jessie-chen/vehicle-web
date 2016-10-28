@@ -11,32 +11,14 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 import '../../styles/test.scss';
-import configureStore from '../store/configureStore';
-import {ready} from '../utils';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory, hashHistory } from 'react-router';
-import { Provider } from 'react-redux';
+import { Route } from 'react-router';
+import {bootstrap} from '../utils';
 import Test from '../containers/Test';
-
-const initialState = {};
-const store = configureStore(initialState);
 
 const routes = (
     <Route path="/" component={Test}>
     </Route>
 );
 
-function main() {
-    ReactDOM.render(
-        <Provider store={store}>
-            <Router history={hashHistory} routes={routes} />
-        </Provider>,
-
-        document.getElementById("root")
-    )
-}
-
-ready(function () {
-    main();
-});
+bootstrap(routes);

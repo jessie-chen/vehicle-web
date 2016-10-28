@@ -3,6 +3,7 @@
  */
 
 export http from './http';
+export bootstrap from './bootstrap';
 
 
 export async function get(url, options = {}) {
@@ -113,7 +114,7 @@ export function isString(obj) {
 }
 
 export function range(start, end) {
-    return Array(end - start + 1).fill(0).map((v, i) => i + start);
+    return new Array(end - start + 1).fill(0).map((v, i) => i + start);
 }
 
 export function random(start, end) {

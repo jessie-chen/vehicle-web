@@ -8,6 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
     // }
 }
 
+/*
 
 import "../../styles/bus_overview.scss";
 import configureStore from '../store/configureStore';
@@ -43,3 +44,19 @@ ready(function () {
     main();
 });
 
+*/
+
+
+
+import "../../styles/bus_overview.scss";
+import React from 'react';
+import { Route } from 'react-router';
+import { bootstrap } from '../utils';
+import BusOverview from '../containers/BusOverview';
+
+const routes = (
+    <Route path="/" component={BusOverview}>
+    </Route>
+);
+
+bootstrap(routes);
