@@ -20,7 +20,7 @@ class Test1 extends Component {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "username="+this.state.username+"&password="+this.state.password
+            body: "username="+this.state.username+"&password="+this.state.password+"&mobileLogin=true"
         }).then(function (res) {
             console.log("SUCCESS");
             console.log(res);
