@@ -26,7 +26,7 @@ class BusActivity extends Component{
     }
 
     href(){
-        window.location.href = "#";
+        window.location.href = "/bus_overview.html";
     }
 
     render(){
@@ -35,18 +35,13 @@ class BusActivity extends Component{
                 <div className="close_button"><i className="open fa fa-expand" aria-hidden="true" onClick={this.openModal}/></div>
                 <ul className="action-menu">
                     <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:50 粤B88888 启动</span></li>
-                    <li className="menu-item dead"><span onClick={this.href}><img src="img/icons/dead.png"/> 2016.10.29 10:50 粤B88888 停车</span></li>
-                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:50 粤B88888 故障</span>
-                        <ul>
-                            <li>xxxxxx</li>
-                            <li>yyyyyyyyyyyyyy</li>
-                        </ul>
-                    </li>
+                    <li className="menu-item dead"><span onClick={this.href}><img src="img/icons/dead.png"/> 2016.10.29 10:50 粤B19302 停车</span></li>
+                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:50 粤B7AD32 故障</span></li>
                     <li className="menu-item warn"><span onClick={this.href}><img src="img/icons/warn.png"/> 2016.10.29 10:50 粤B88888 故障</span></li>
-                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:50 粤B88888 故障</span></li>
-                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:50 粤B88888 启动</span></li>
-                    <li className="menu-item error"><span onClick={this.href}><img src="img/icons/error.png"/> 2016.10.29 10:50 粤B88888 熄火</span></li>
-                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:50 粤B88888 启动</span></li>
+                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:49 粤B88888 故障</span></li>
+                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:48 粤B8C1345 启动</span></li>
+                    <li className="menu-item error"><span onClick={this.href}><img src="img/icons/error.png"/> 2016.10.29 10:47 粤B163873 熄火</span></li>
+                    <li className="menu-item normal"><span onClick={this.href}><img src="img/icons/normal.png"/> 2016.10.29 10:46 粤B81920 启动</span></li>
                 </ul>
                 <Modal
                     isOpen={this.state.modalIsOpen}

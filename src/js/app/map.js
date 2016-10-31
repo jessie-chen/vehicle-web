@@ -102,7 +102,7 @@ function addCar(map) {
 
         // marker 鼠标事件
         marker.addEventListener("click", function (e) {
-            window.location.href = "#";
+            window.location.href = "/bus_overview.html";
         });
 
 
