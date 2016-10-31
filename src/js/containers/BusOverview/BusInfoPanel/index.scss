@@ -1,30 +1,61 @@
 .car_detail_panel{
-  float: left;
-  margin-left: 314px;
-  position: absolute;
+  font-size: 14px;
+  color: #fff;
+  line-height: 28px;
+  margin-top: 6%;
+  margin-left: 5%;
+  overflow: hidden;
+    .left-content{
+        display: inline-block;
+        width:43%;
+    }
+    .right-content{
+      margin-left: 12%;
+    }
 }
-.history_panel{
-  margin-left: 856px;
+.history-panel{
+  font-size: 14px;
+  color: #fff;
+  overflow: hidden;
+  .history-title{
+    margin-top: 3%;
+    margin-left:5%;
+  }
+  .history-content{
+    margin-top: 5%;
+    margin-left: 5%;
+    line-height: 26px;
+  }
 }
-.right-content{
- float: right;
-}
+
 .bus-pic{
-  position: fixed;
-  margin-top: 26px;
-  margin-left: -180px;
-}
-.bus-img{
   display: inline-block;
-  background: url("bus.jpg") no-repeat 0 0;
+  margin-top: 6%;
+  margin-left: 33%;
+}
+ i {
+   display: inline-block;
+ }
+.blue-bus{
+  background: url("img/blue_bus.png") no-repeat 0 0;
   width: 111px;
-  height: 129px;
+  height: 128px;
 }
-.history-title{
-  position: fixed;
-  margin-top: -12px;
+.red-bus{
+  background: url("img/red_bus.png") no-repeat 0 0;
+  width: 110px;
+  height: 128px;
 }
-.history-content{
-  position: fixed;
-  margin-top: 18px;
+.orange-bus{
+  background: url("img/blue_bus.png") no-repeat 0 0;
+  width: 111px;
+  height: 128px;
+}
+.gray-bus{
+  background: url("img/gray_bus.png") no-repeat 0 0;
+  width: 111px;
+  height: 128px;
+}
+.outside-box{
+  overflow: hidden;
 }

@@ -7,7 +7,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import { PREFIX, get_bus_group } from '../../actions/bus';
-import "./bus_group_tree.scss"
+import "./index.scss"
 @connect(state => state[PREFIX] )
 class BusGroupTree extends Component {
 
@@ -92,7 +92,9 @@ class BusGroupItem extends Component{
             case 2 : //stalled
                 return <span className="gray-elem"><i className={is_clicked ? "clicked_gray" : "normal_gray"}> </i>{text}</span>;
             case 3: //breakdown
-                return <span className="red-elem"><i className={is_clicked ? "clicked_red" : "normal_red"}> </i>{text}</span>
+                return <span className="red-elem"><i className={is_clicked ? "clicked_red" : "normal_red"}> </i>{text}</span>;
+            default:
+                return <span className="green-elem"><i className={is_clicked ? "clicked_green" : "normal_green"}> </i>{text}</span>;
         }
     }
     render() {

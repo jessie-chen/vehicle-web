@@ -14,7 +14,6 @@ import HistoryActivity from './HistoryActivity';
 import CanDataDashboard from './CanDataDashboard';
 import CanDataDetail from './CanDataDetail/index';
 
-
 class BusOverview extends Component {
 
     constructor() {
@@ -59,6 +58,7 @@ class BusOverview extends Component {
                         </div>
                     </div>
                 </div>
+
                 <HistoryActivity/>
                 <CanDataDetail/>
                 <Footer/>

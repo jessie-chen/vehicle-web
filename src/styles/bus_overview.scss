@@ -16,7 +16,7 @@ body {
 
 .main-content {
     /* background: rgba(3,19,27,.7); */
-    background: url("/img/bus_overview_bg.png") no-repeat 0 0;
+    background: url("../img/bus_overview_bg.png") no-repeat 0 0;
     background-size: cover;
     min-height: 500px;
     border-radius: 5px;
@@ -41,7 +41,6 @@ body {
 
 .bus-info {
     border: 1px solid #123F47;
-    height: 168px;
     border-radius: 8px;
     background: rgba(9,27,40,.5);
 }
@@ -86,7 +85,7 @@ body {
 }
 
 .realtime-data {
-    background: url("/img/bus_skeleton.png") no-repeat center center;
+    background: url("../img/bus_skeleton.png") no-repeat center center;
     position: relative;
     margin: 0 auto;
     width: 1000px;

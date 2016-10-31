@@ -22,17 +22,14 @@ export default class InfoBoxFrame extends React.Component{
         }
     }
     render(){
-        const {size,title} = this.props;
+        const {size,text} = this.props;
         let sizes = this.frame_size[size];
         return (
             <div className="info_box">
-                <span className="box-left"><i className={sizes+"_left"}> </i></span><span className="box-title"><i className="pentagon"><span className="title-text">{title}</span></i></span>
-                <span className="box-top"><i className={sizes+"_top"}> </i></span>
-                <div className="dashboard">
+                <div className={sizes+"_frame"}>
+                    <span className="title-text">{text}</span>
                     {this.props.children}
                 </div>
-                <span className="box-bottom"><i className={sizes+"_bottom"}> </i></span>
-                <span className="box-right"><i className={sizes+"_right"}> </i></span>
             </div>
         );
     }
