@@ -35,13 +35,14 @@ function _helper(additionalOptions) {
         let options, mapper;
 
         if(optionsOrMapper === undefined) {
+            options = additionalOptions;
         }
         else if(typeof(optionsOrMapper) === "function") {
             options = additionalOptions;
             mapper = optionsOrMapper;
         }
         else if(typeof(optionsOrMapper) === "object") {
-            options = Object.assign({}, optionsOrMapper, additionalOptions);
+            options = Object.assign({}, additionalOptions, optionsOrMapper);
             mapper = mapperIfExist;
         }
         else {
@@ -52,10 +53,11 @@ function _helper(additionalOptions) {
     }
 }
 
+const default_options = {headers: {"Content-Type": "application/json"}};
 
-const get = _helper({method: "GET"});
+const get = _helper({method: "GET", ...default_options });
 
-const post = _helper({method: "POST"});
+const post = _helper({method: "POST", ...default_options });
 
 
 module.exports = {

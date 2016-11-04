@@ -32,11 +32,7 @@ class Test1 extends Component {
 
     getBusInfo() {
         const busId = '563e7d530d4643b69739b7327c6e0412';
-        http.get(`/vehicle/busInfo/${busId}`, {
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then((res) => {
+        http.get(`/vehicle/busInfo/${busId}`).then((res) => {
             console.log(res);
         }, (err) => {
             console.log(err);
